@@ -538,7 +538,6 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.0.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
 </code></pre>
-<p><img src="/images/2024-07-03hexo/b9ed9f4872c8da34cbd81c0ffef10bd.png" alt="b9ed9f4872c8da34cbd81c0ffef10bd"></p>
 <h2 id="1-hexo-安装"><a href="#1-hexo-安装" class="headerlink" title="1.hexo 安装"></a>1.hexo 安装</h2><p>安装前需要准备好npm环境</p>
 <pre class=" language-java"><code class="language-java">安装hexo客户端
 npm i hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g  #
@@ -557,7 +556,7 @@ hexo s <span class="token punctuation">[</span><span class="token operator">-</s
 <pre><code>git clone https://github.com/blinkfox/hexo-theme-matery.git
 </code></pre>
 <p>最后采用了在github 下载压缩包 然后 复制解压到 themes 文件夹下的方式安装主题</p>
-<p><img src="/2024/07/03/2024-07-03hexo-bo-ke/image-20240703180115686.png" alt="image-20240703180115686"></p>
+<p><img src="/images/2024-07-03hexo%E5%8D%9A%E5%AE%A2/image-20240703180115686.png" alt="image-20240703180115686"></p>
 </blockquote>
 <blockquote>
 <p>主题设置按照<a target="_blank" rel="noopener" href="https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/">matery</a> 教程中设置, 实现了文章全文搜索,和文章字数统计. </p>
@@ -567,8 +566,8 @@ hexo s <span class="token punctuation">[</span><span class="token operator">-</s
 如果是单纯设置博客,仓库名可以随便设置; 例如我一开始使用的hexo仓库部署
 但是这么做会影响下面的图片部署.
 </code></pre>
-<p><img src="/2024/07/03/2024-07-03hexo-bo-ke/image-20240703181034779.png" alt="image-20240703181034779"></p>
-<p> <img src="/2024/07/03/2024-07-03hexo-bo-ke/image-20240703181203043.png" alt="image-20240703181203043"></p>
+<p><img src="/images/2024-07-03hexo%E5%8D%9A%E5%AE%A2/image-20240703181034779.png" alt="image-20240703181034779"></p>
+<p> <img src="/images/2024-07-03hexo%E5%8D%9A%E5%AE%A2/image-20240703181203043.png" alt="image-20240703181203043"></p>
 <h3 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h3><blockquote>
 <p>首先需要安装发布的插件， 插件发布项目需要用到 github  ssh连接方式, 提前配置好ssh key</p>
 </blockquote>
@@ -577,7 +576,7 @@ hexo s <span class="token punctuation">[</span><span class="token operator">-</s
 <h3 id="项目配置"><a href="#项目配置" class="headerlink" title="项目配置"></a>项目配置</h3><blockquote>
 <p>hexo 配置文件 _config.yml 设置如下图   </p>
 </blockquote>
-<p> <img src="/2024/07/03/2024-07-03hexo-bo-ke/image-20240703181034779.png" alt="image-20240703181034779"></p>
+<p> <img src="/images/2024-07-03hexo%E5%8D%9A%E5%AE%A2/image-20240703181034779.png" alt="image-20240703181034779"></p>
 <h3 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署"></a>项目部署</h3><pre class=" language-java"><code class="language-java"># Hexo会根据配置文件渲染出一套静态页面
 hexo g
 # 将上一步渲染出的一系列文件上传至至Github Pages
@@ -602,14 +601,14 @@ hexo g <span class="token operator">-</span>d
 </code></pre>
 <pre><code>编写博客(md)使用 typora 在偏好设置中如图设置:
 </code></pre>
-<p><img src="/2024/07/03/2024-07-03hexo-bo-ke/image-20240703180647089.png" alt="image-20240703180647089"></p>
+<p><img src="/images/2024-07-03hexo%E5%8D%9A%E5%AE%A2/image-20240703180647089.png" alt="image-20240703180647089"></p>
 <blockquote>
 <p>安装图片处理插件</p>
 </blockquote>
 <pre><code>npm install https://github.com/CodeFalling/hexo-asset-image --save
 在hexo g  时可以复制图片到生成的静态文件(html) 同级目录中,并且图片路径也对应处理.
 </code></pre>
-<p><img src="/2024/07/03/2024-07-03hexo-bo-ke/image-20240703180835748.png" alt="image-20240703180835748"></p>
+<p><img src="/images/2024-07-03hexo%E5%8D%9A%E5%AE%A2/image-20240703180835748.png" alt="image-20240703180835748"></p>
 <h2 id="5-参考链接"><a href="#5-参考链接" class="headerlink" title="5.参考链接"></a>5.参考链接</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa/article/details/103733655">hexo+github搭建博客(超级详细版，精细入微)</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_58608526/article/details/124652412">Hexo+Github博客搭建教程</a></p>
 <h2 id="6-后记"><a href="#6-后记" class="headerlink" title="6.后记"></a>6.后记</h2><p>​	博客还有很多内容可以设置</p>
@@ -626,7 +625,7 @@ npm i hexo<span class="token punctuation">-</span>permalink<span class="token pu
 npm i <span class="token punctuation">-</span><span class="token punctuation">-</span>save hexo<span class="token punctuation">-</span>wordcount
 </code></pre>
 </blockquote>
-<p><img src="/2024/07/03/2024-07-03hexo-bo-ke/back-title.jpg" alt="back-title"></p>
+<p><img src="/images/2024-07-03hexo%E5%8D%9A%E5%AE%A2/back-title.jpg" alt="back-title"></p>
 
                 
             </div>
