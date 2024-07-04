@@ -836,6 +836,33 @@ npm i <span class="token punctuation">-</span><span class="token punctuation">-<
     </div>
 
     
+        <link rel="stylesheet" href="/hexo/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/hexo/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/hexo/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'Ov23liQyy5HLg60AOZrW',
+        clientSecret: '84f5bb2451520d87729e47653c258338019606b2',
+        repo: 'hexo',
+        owner: 'liudongsir',
+        admin: "liudongsir",
+        id: '2024-07-03T13-56-23',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
 
     
 
