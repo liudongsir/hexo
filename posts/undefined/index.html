@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="右键菜单, Hexo">
+    <meta name="keywords" content="Hello, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>右键菜单 | Hexo</title>
+    <title>Hello | Hexo</title>
     <link rel="icon" type="image/png" href="/hexo/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/hexo/libs/awesome/css/all.css">
@@ -349,12 +349,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/hexo/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/hexo/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">右键菜单</h1>
+                    <h1 class="description center-align post-title">Hello</h1>
                 </div>
             </div>
         </div>
@@ -491,14 +491,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    73
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    1 分
                 </div>
                 
 
@@ -518,204 +518,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="右键菜单"><a href="#右键菜单" class="headerlink" title="右键菜单"></a>右键菜单</h2><p>[TOC]</p>
-<h3 id="创建右键cmd"><a href="#创建右键cmd" class="headerlink" title="创建右键cmd"></a>创建右键cmd</h3><pre class="line-numbers language-java"><code class="language-java">创建一个cmd<span class="token punctuation">.</span>reg 输入以下内容
-
-Windows Registry Editor Version <span class="token number">5.00</span>
-
-
-
-<span class="token punctuation">[</span>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell\cmd_here<span class="token punctuation">]</span>
-
-@<span class="token operator">=</span><span class="token string">"打开命令行"</span>
-
-
-
-<span class="token punctuation">[</span>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell\cmd_here\command<span class="token punctuation">]</span>
-
-@<span class="token operator">=</span><span class="token string">"\"C:\\Windows\\System32\\cmd.exe\""</span>
-
-
-
-<span class="token punctuation">[</span>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\cmdPrompt<span class="token punctuation">]</span>
-
-@<span class="token operator">=</span><span class="token string">"打开命令行"</span>
-
-
-
-<span class="token punctuation">[</span>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\cmdPrompt\command<span class="token punctuation">]</span>
-
-@<span class="token operator">=</span><span class="token string">"\"C:\\Windows\\System32\\cmd.exe\" \"cd %1\""</span>
-
-
-
-<span class="token punctuation">[</span>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\shell\cmd_here<span class="token punctuation">]</span>
-
-@<span class="token operator">=</span><span class="token string">"打开命令行"</span>
-
-
-
-<span class="token punctuation">[</span>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\shell\cmd_here\command<span class="token punctuation">]</span>
-
-@<span class="token operator">=</span><span class="token string">"\"C:\\Windows\\System32\\cmd.exe\""</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="设置图表-icon"><a href="#设置图表-icon" class="headerlink" title="设置图表 icon"></a>设置图表 icon</h4><p>在 cmd_here 下创建 字符串值    icon   值:</p>
-<p>可以设置为   C:\Windows\System32\cmd.exe</p>
-<p>也可以直接设置一个图片 test.icon</p>
-<h3 id="设置-winr快捷命令"><a href="#设置-winr快捷命令" class="headerlink" title="设置 winr快捷命令"></a>设置 winr快捷命令</h3><h4 id="设置vbs脚本"><a href="#设置vbs脚本" class="headerlink" title="设置vbs脚本"></a>设置vbs脚本</h4><pre class="line-numbers language-java"><code class="language-java">新建一个 inkpath<span class="token punctuation">.</span>vbs脚本
-
-' 脚本说明 https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>blog<span class="token punctuation">.</span>csdn<span class="token punctuation">.</span>net<span class="token operator">/</span>milaoshu1020<span class="token operator">/</span>article<span class="token operator">/</span>details<span class="token operator">/</span><span class="token number">80711574</span>
-' 脚本版本 v1<span class="token number">.1</span>
-' installpath是本脚本要安装到的路径<span class="token punctuation">.</span>
-' d<span class="token operator">:</span>\L是脚本所在的路径<span class="token punctuation">,</span>也是保存快捷方式的目录<span class="token punctuation">.</span>
-' <span class="token punctuation">[</span>更新历史<span class="token punctuation">]</span>
-' <span class="token number">2019.06</span><span class="token punctuation">.</span><span class="token number">03</span> v1<span class="token number">.2</span> 增加了安装时自动提权的代码<span class="token punctuation">.</span>
-' <span class="token number">2018.12</span><span class="token punctuation">.</span><span class="token number">29</span> v1<span class="token number">.1</span> 新增加了对系统变量PATHEXT的注册<span class="token punctuation">,</span>效果是自定义命令可以在命令行中使用<span class="token punctuation">(</span>不用加扩展名<span class="token string">".LNK"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>
-' <span class="token number">2018.06</span><span class="token punctuation">.</span><span class="token number">18</span> v1<span class="token number">.0</span> 初始版本<span class="token punctuation">,</span>实现了基本功能<span class="token punctuation">.</span>
-installpath <span class="token operator">=</span> <span class="token string">"E:\worksoft\inkpath\Win+R快捷命令.vbs"</span>
-
-set fso <span class="token operator">=</span> <span class="token function">createobject</span><span class="token punctuation">(</span><span class="token string">"scripting.filesystemobject"</span><span class="token punctuation">)</span>
-set shell <span class="token operator">=</span> <span class="token function">createobject</span><span class="token punctuation">(</span><span class="token string">"wscript.shell"</span><span class="token punctuation">)</span>
-installdir <span class="token operator">=</span> fso<span class="token punctuation">.</span><span class="token function">getparentfoldername</span><span class="token punctuation">(</span>installpath<span class="token punctuation">)</span>
-installbase <span class="token operator">=</span> fso<span class="token punctuation">.</span><span class="token function">getbasename</span><span class="token punctuation">(</span>installpath<span class="token punctuation">)</span>
-
-If wscript<span class="token punctuation">.</span>arguments<span class="token punctuation">.</span>count <span class="token operator">=</span> <span class="token number">0</span> Then
-    Set sh <span class="token operator">=</span> <span class="token function">createobject</span><span class="token punctuation">(</span><span class="token string">"shell.application"</span><span class="token punctuation">)</span>
-    sh<span class="token punctuation">.</span>shellexecute wscript<span class="token punctuation">.</span>fullname<span class="token punctuation">,</span><span class="token string">""</span><span class="token string">""</span> <span class="token operator">&amp;</span> wscript<span class="token punctuation">.</span>scriptfullname <span class="token operator">&amp;</span> <span class="token string">""</span><span class="token string">" -install"</span><span class="token punctuation">,</span><span class="token punctuation">,</span><span class="token string">"runas"</span>
-Else
-    If wscript<span class="token punctuation">.</span><span class="token function">arguments</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">"-install"</span> Then
-        Select Case <span class="token function">msgbox</span><span class="token punctuation">(</span><span class="token string">"是否安装'"</span> <span class="token operator">&amp;</span> installbase <span class="token operator">&amp;</span> <span class="token string">"'脚本?"</span><span class="token punctuation">,</span>vbokcancel<span class="token punctuation">)</span>
-        Case vbcancel
-            wscript<span class="token punctuation">.</span>quit
-        End select
-        copyscriptfile
-        addinstdirtosystempath
-        createinstdirlnk
-        createsendtolnk
-        msgbox <span class="token string">"'"</span> <span class="token operator">&amp;</span> installpath <span class="token operator">&amp;</span> <span class="token string">"'安装完成,你现在可以:"</span> <span class="token operator">&amp;</span> vbcrlf <span class="token operator">&amp;</span> _
-            <span class="token string">"使用右键菜单中的'发送到'创建自定义命令."</span> <span class="token operator">&amp;</span> vbcrlf <span class="token operator">&amp;</span> _
-            <span class="token string">"Win+R,输入'"</span> <span class="token operator">&amp;</span> fso<span class="token punctuation">.</span><span class="token function">getfolder</span><span class="token punctuation">(</span>installdir<span class="token punctuation">)</span><span class="token punctuation">.</span>name <span class="token operator">&amp;</span> <span class="token string">"'以打开命令(快捷方式)列表目录."</span> <span class="token operator">&amp;</span> vbcrlf <span class="token operator">&amp;</span> _
-            <span class="token string">"Win+R,输入'命令(快捷方式名称)'以打开相应的程序或者目录."</span>
-    Else
-        prompttoaddlnk
-    End If
-End If
-
-Sub <span class="token function">PromptToAddLnk</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    For i <span class="token operator">=</span> <span class="token number">0</span> To wscript<span class="token punctuation">.</span>arguments<span class="token punctuation">.</span>count <span class="token operator">-</span> <span class="token number">1</span>
-        targetpath <span class="token operator">=</span> wscript<span class="token punctuation">.</span><span class="token function">arguments</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
-        lnkname <span class="token operator">=</span> fso<span class="token punctuation">.</span><span class="token function">getbasename</span><span class="token punctuation">(</span>targetpath<span class="token punctuation">)</span>
-        <span class="token keyword">do</span>
-            lnkname <span class="token operator">=</span> <span class="token function">inputbox</span><span class="token punctuation">(</span><span class="token string">"请输入'"</span> <span class="token operator">&amp;</span> fso<span class="token punctuation">.</span><span class="token function">getfilename</span><span class="token punctuation">(</span>targetpath<span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token string">"'的快捷方式名称(用于运行命令):"</span><span class="token punctuation">,</span><span class="token punctuation">,</span>lnkname<span class="token punctuation">)</span>
-            lnkpath <span class="token operator">=</span> fso<span class="token punctuation">.</span><span class="token function">buildpath</span><span class="token punctuation">(</span>installdir<span class="token punctuation">,</span>lnkname <span class="token operator">&amp;</span> <span class="token string">".lnk"</span><span class="token punctuation">)</span>
-            If Not fso<span class="token punctuation">.</span><span class="token function">fileexists</span><span class="token punctuation">(</span>lnkpath<span class="token punctuation">)</span> Or lnkname <span class="token operator">=</span> <span class="token string">""</span> Then
-                Exit Do
-            End If
-            Select Case <span class="token function">msgbox</span><span class="token punctuation">(</span><span class="token string">"'"</span> <span class="token operator">&amp;</span> lnkpath <span class="token operator">&amp;</span> <span class="token string">"'文件已存在,是否覆盖?"</span><span class="token punctuation">,</span>vbexclamation Or vbyesnocancel<span class="token punctuation">)</span>
-            Case vbyes
-                Exit Do
-            Case vbcancel
-                lnkname <span class="token operator">=</span> <span class="token string">""</span>
-                Exit Do
-            End Select
-        Loop While True
-        If lnkname <span class="token operator">&lt;</span><span class="token operator">></span> <span class="token string">""</span> Then
-            Set shortcut <span class="token operator">=</span> shell<span class="token punctuation">.</span><span class="token function">createshortcut</span><span class="token punctuation">(</span>lnkpath<span class="token punctuation">)</span>
-            shortcut<span class="token punctuation">.</span>targetpath <span class="token operator">=</span> targetpath
-            shortcut<span class="token punctuation">.</span>save
-            msgbox <span class="token string">"'"</span> <span class="token operator">&amp;</span> lnkpath <span class="token operator">&amp;</span> <span class="token string">"'创建成功!"</span>
-        End If
-    Next
-End Sub
-
-Sub <span class="token function">CopyScriptFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    If <span class="token function">LCase</span><span class="token punctuation">(</span>installpath<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">LCase</span><span class="token punctuation">(</span>wscript<span class="token punctuation">.</span>scriptfullname<span class="token punctuation">)</span> Then
-        Exit Sub
-    End If
-
-    If Not fso<span class="token punctuation">.</span><span class="token function">folderexists</span><span class="token punctuation">(</span>installdir<span class="token punctuation">)</span> Then
-        fso<span class="token punctuation">.</span><span class="token function">createfolder</span><span class="token punctuation">(</span>installdir<span class="token punctuation">)</span>
-    End If
-
-    fso<span class="token punctuation">.</span>copyfile wscript<span class="token punctuation">.</span>scriptfullname<span class="token punctuation">,</span>installpath<span class="token punctuation">,</span><span class="token boolean">true</span>
-End Sub
-
-Sub <span class="token function">AddInstDirToSystemPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    pathname <span class="token operator">=</span> installdir <span class="token operator">&amp;</span> <span class="token string">";"</span>
-    Set sysenv <span class="token operator">=</span> shell<span class="token punctuation">.</span><span class="token function">environment</span><span class="token punctuation">(</span><span class="token string">"System"</span><span class="token punctuation">)</span>
-    If <span class="token function">InStr</span><span class="token punctuation">(</span><span class="token function">LCase</span><span class="token punctuation">(</span><span class="token function">sysenv</span><span class="token punctuation">(</span><span class="token string">"PATH"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">LCase</span><span class="token punctuation">(</span>pathname<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span> Then
-        <span class="token function">sysenv</span><span class="token punctuation">(</span><span class="token string">"PATH"</span><span class="token punctuation">)</span> <span class="token operator">=</span> pathname <span class="token operator">&amp;</span> <span class="token function">sysenv</span><span class="token punctuation">(</span><span class="token string">"PATH"</span><span class="token punctuation">)</span>
-    End If
-    extname <span class="token operator">=</span> <span class="token string">";.LNK"</span>
-    If <span class="token function">InStr</span><span class="token punctuation">(</span><span class="token function">LCase</span><span class="token punctuation">(</span><span class="token function">sysenv</span><span class="token punctuation">(</span><span class="token string">"PATHEXT"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">LCase</span><span class="token punctuation">(</span>extname<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span> Then
-        <span class="token function">sysenv</span><span class="token punctuation">(</span><span class="token string">"PATHEXT"</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">sysenv</span><span class="token punctuation">(</span><span class="token string">"PATHEXT"</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> extname
-    End If
-End Sub
-
-Sub <span class="token function">CreateSendToLnk</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    sendtodir <span class="token operator">=</span> shell<span class="token punctuation">.</span><span class="token function">specialfolders</span><span class="token punctuation">(</span><span class="token string">"SendTo"</span><span class="token punctuation">)</span>
-    lnkpath <span class="token operator">=</span> fso<span class="token punctuation">.</span><span class="token function">buildpath</span><span class="token punctuation">(</span>sendtodir<span class="token punctuation">,</span>installbase <span class="token operator">&amp;</span> <span class="token string">".lnk"</span><span class="token punctuation">)</span>
-    Set shortcut <span class="token operator">=</span> shell<span class="token punctuation">.</span><span class="token function">createshortcut</span><span class="token punctuation">(</span>lnkpath<span class="token punctuation">)</span>
-    shortcut<span class="token punctuation">.</span>targetpath <span class="token operator">=</span> installpath
-    shortcut<span class="token punctuation">.</span>save
-End Sub
-
-Sub <span class="token function">CreateInstDirLnk</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    lnkpath <span class="token operator">=</span> fso<span class="token punctuation">.</span><span class="token function">buildpath</span><span class="token punctuation">(</span>installdir<span class="token punctuation">,</span>fso<span class="token punctuation">.</span><span class="token function">getfolder</span><span class="token punctuation">(</span>installdir<span class="token punctuation">)</span><span class="token punctuation">.</span>name <span class="token operator">&amp;</span> <span class="token string">".lnk"</span><span class="token punctuation">)</span>
-    If Not fso<span class="token punctuation">.</span><span class="token function">fileexists</span><span class="token punctuation">(</span>lnkpath<span class="token punctuation">)</span> Then
-        Set shortcut <span class="token operator">=</span> shell<span class="token punctuation">.</span><span class="token function">createshortcut</span><span class="token punctuation">(</span>lnkpath<span class="token punctuation">)</span>
-        shortcut<span class="token punctuation">.</span>targetpath <span class="token operator">=</span> installdir
-        shortcut<span class="token punctuation">.</span>save
-    End If
-End Sub
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="使用ScriptCryptor-转换为-winr-exe"><a href="#使用ScriptCryptor-转换为-winr-exe" class="headerlink" title="使用ScriptCryptor 转换为 winr.exe"></a>使用ScriptCryptor 转换为 winr.exe</h4><h4 id="设置右键菜单"><a href="#设置右键菜单" class="headerlink" title="设置右键菜单"></a>设置右键菜单</h4><pre class="line-numbers language-java"><code class="language-java">在注册表 folder 下创建右键  command 为 E<span class="token operator">:</span>\worksoft\inkpath\winr<span class="token punctuation">.</span>exe <span class="token string">"%V"</span>
+                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="注册表说明"><a href="#注册表说明" class="headerlink" title="注册表说明"></a>注册表说明</h2><pre class="line-numbers language-java"><code class="language-java">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell  下创建  对文件夹生效
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-java"><code class="language-java">计算机\HKEY_CLASSES_ROOT\<span class="token operator">*</span>\shell 下  对 文件<span class="token punctuation">(</span><span class="token punctuation">.</span>txt   <span class="token punctuation">.</span>docx<span class="token punctuation">)</span>生效<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="folder-和-directory-区别"><a href="#folder-和-directory-区别" class="headerlink" title="folder 和 directory 区别"></a>folder 和 directory 区别</h3><pre class="line-numbers language-java"><code class="language-java">在 Windows 系统中，我们经常会见到「目录」和「文件夹」两个名词，但很多人会这两个概念混用，甚至搞不清楚它们的区别，包括写这篇博文的我，之前也是一样。同样表示「文件夹」的概念，为什么会有两个说法？事实上，这两个词不仅仅是在中文中，在英文原文中，也是有两个不同的词汇，Directory 和 Folder。通常，Directory 被翻译成「目录」，而 Folder 被翻译成「文件夹」。但实际的情况是，很多情况下，这两个的翻译都比较混乱，Directory 也经常被翻译为「文件夹」。那么微软使用 Directory 和 Folder 这两个名词到底什么不同的意义和差异呢？这个问题我多年也没搞清楚，直到最近又在网上搜索资料，并自己进行一些测试后，才发现他们的细微差别。
-
-首先，作为一个 Windows 开发人员，注册表、文件关联等都应该是了解的。那么大家应该都知道，在 Windows 的注册表编辑器中的 HKEY_CLASSES_ROOT 节点下面，有 Directory 和 Folder 两个子键，类似其他的 ProgId 子键，支持在其 shell 子键添加自定义的动作和命令。有一天我突发奇想，如果我分别在这两个位置添加一个动作项，系统该如何显示它们？于是我分别在不同的位置单独添加注册表项，然后观察右键菜单，发现了其中的秘密：
-
-仅在 HKEY_CLASSES_ROOTDirectoryshell 下面随便添加一个节点，如 action，我分别在「计算机」、「回收站」、「计算机」中的任意驱动器、普通文件夹上点击右键，只有普通的文件夹右键菜单中出现了 action 这一菜单项。
-
-仅在 HKEY_CLASSES_ROOTFoldershell 下面随便添加一个节点，如 action，我分别在「计算机」、「回收站」、「计算机」中的任意驱动器、普通文件夹上点击右键，所有这些项目的右键菜单中均出现了 action 这一菜单项。
-
-仅在 HKEY_CLASSES_ROOTDriveshell 下面随便添加一个节点，如 action，我分别在「计算机」、「回收站」、「计算机」中的任意驱动器、普通文件夹上点击右键，只有驱动器盘符右键菜单中出现了 action 这一菜单项。
-
-如此看来，Folder 的范围其实是很大的，它包括了系统中所有可以双击打开并查看其内容的「文件夹」项目，包括「计算机」、「回收站」、「控制面板」等这些虚拟文件夹，以及「计算机」中的所有磁盘驱动器，以及其中的任何文件夹 <span class="token punctuation">(</span>Directory<span class="token punctuation">)</span>。
-
-而 Directory 的概念则小的很多，它必须是存在于物理磁盘上的一个「文件夹」项目，而「计算机」中的所有磁盘驱动器，如「本地磁盘 <span class="token punctuation">(</span>C<span class="token operator">:</span><span class="token punctuation">)</span>」则不认为是 Directory。
-
-总结：如果是开发外壳扩展 dll，最好根据需要写入到正确的子键下面，不要在 Directory 和 Folder 等子键下乱写一通。虽然有的外壳扩展不支持虚拟文件夹，写在 Directory 下系统也并不会加载，但还是希望各位开发人员能够正确遵守规范。
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="完整示例"><a href="#完整示例" class="headerlink" title="完整示例"></a>完整示例</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token punctuation">[</span>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\添加到快捷方式<span class="token punctuation">]</span>
-<span class="token string">"icon"</span><span class="token operator">=</span><span class="token string">"E:\\back\\Pictures\\icon\\damotouicon (6).ico"</span>
-
-<span class="token punctuation">[</span>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\添加到快捷方式\command<span class="token punctuation">]</span>
-@<span class="token operator">=</span><span class="token string">"E:\\worksoft\\inkpath\\winr.exe \"%V\""</span>
-
-<span class="token punctuation">[</span>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\open_cmd<span class="token punctuation">]</span>
-<span class="token string">"icon"</span><span class="token operator">=</span><span class="token string">"C:\\Windows\\System32\\cmd.exe"</span>
-
-<span class="token punctuation">[</span>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\open_cmd\command<span class="token punctuation">]</span>
-@<span class="token operator">=</span><span class="token string">"\"C:\\Windows\\System32\\cmd.exe\" \"cd %1\""</span>
-
-<span class="token punctuation">[</span>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell\open_cmd<span class="token punctuation">]</span>
-<span class="token string">"icon"</span><span class="token operator">=</span><span class="token string">"C:\\Windows\\System32\\cmd.exe"</span>
-
-<span class="token punctuation">[</span>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell\open_cmd\command<span class="token punctuation">]</span>
-@<span class="token operator">=</span><span class="token string">"\"C:\\Windows\\System32\\cmd.exe\""</span>
-
-
-<span class="token punctuation">[</span>HKEY_CLASSES_ROOT\<span class="token operator">*</span>\shell\添加到快捷命令<span class="token punctuation">]</span>
-<span class="token string">"icon"</span><span class="token operator">=</span><span class="token string">"E:\\back\\Pictures\\icon\\damotouicon (6).ico"</span>
-
-<span class="token punctuation">[</span>HKEY_CLASSES_ROOT\<span class="token operator">*</span>\shell\添加到快捷命令\command<span class="token punctuation">]</span>
-@<span class="token operator">=</span><span class="token string">"E:\\worksoft\\inkpath\\winr.exe \"%V\""</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
                 
             </div>
@@ -742,7 +557,7 @@ End Sub
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liudongsir.github.io/hexo/hexo/you-jian-cai-dan/">https://liudongsir.github.io/hexo/hexo/you-jian-cai-dan/</a>
+                    <a href="https://liudongsir.github.io/hexo/hexo/posts/undefined/">https://liudongsir.github.io/hexo/hexo/posts/undefined/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -929,33 +744,6 @@ End Sub
     </div>
 
     
-        <link rel="stylesheet" href="/hexo/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/hexo/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
-    </div>
-    <div id="gitalk-container" class="card-content"></div>
-</div>
-
-<script src="/hexo/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: 'Ov23liQyy5HLg60AOZrW',
-        clientSecret: '84f5bb2451520d87729e47653c258338019606b2',
-        repo: 'hexo2',
-        owner: 'liudongsir',
-        admin: "liudongsir",
-        id: '2024-07-03T15-33-42',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
-
-    
 
     
 
@@ -978,13 +766,13 @@ End Sub
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/hexo/ri-zhi-shi-yong/">
+                <a href="/hexo/posts/undefined/">
                     <div class="card-image">
                         
                         
-                        <img src="/hexo/medias/featureimages/19.jpg" class="responsive-img" alt="日志使用">
+                        <img src="/hexo/medias/featureimages/20.jpg" class="responsive-img" alt="右键菜单">
                         
-                        <span class="card-title">日志使用</span>
+                        <span class="card-title">右键菜单</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1015,13 +803,13 @@ End Sub
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/hexo/hello-world/">
+                <a href="/hexo/posts/27999/">
                     <div class="card-image">
                         
                         
-                        <img src="/hexo/medias/featureimages/2.jpg" class="responsive-img" alt="Hello">
+                        <img src="/hexo/medias/featureimages/2.jpg" class="responsive-img" alt="hexo博客图片访问问题">
                         
-                        <span class="card-title">Hello</span>
+                        <span class="card-title">hexo博客图片访问问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1036,11 +824,23 @@ End Sub
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            liudong
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/hexo/categories/hexo%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    hexo博客
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/hexo/tags/hexo%E5%8D%9A%E5%AE%A2/">
+                        <span class="chip bg-color">hexo博客</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1241,7 +1041,7 @@ End Sub
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4k</span>&nbsp;字
+                class="white-color">16.7k</span>&nbsp;字
             
             
             
